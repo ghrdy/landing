@@ -2,30 +2,32 @@
   background-color: #363636;
   color: #ccc;
   width: 100%;
-  padding: clamp(1.5rem, 4vw, 3rem) 1rem;
+  padding: clamp(1rem, 3vw, 2rem) 1rem;
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: clamp(1rem, 3vw, 2rem);
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(0.5rem, 2vw, 1.5rem);
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.footer-logo {
-  width: clamp(30px, 8vw, 40px);
-  height: auto;
-}
-
 .footer-section {
   padding: 0.5rem;
+  min-width: 0;
+}
+
+.footer-logo {
+  width: clamp(25px, 6vw, 35px);
+  height: auto;
+  margin-bottom: 0.5rem;
 }
 
 .footer-section h4 {
   color: #fff;
-  margin-bottom: 0.75rem;
-  font-size: clamp(0.9rem, 2vw, 1rem);
+  margin-bottom: 0.5rem;
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
 }
 
 .footer-section ul {
@@ -35,33 +37,80 @@
 }
 
 .footer-section ul li {
-  margin-bottom: 0.5rem;
-  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  margin-bottom: 0.4rem;
+  font-size: clamp(0.75rem, 1.6vw, 0.85rem);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-section ul li:hover {
+  color: #fff;
 }
 
 .app-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 
 .store-badge {
-  width: clamp(100px, 30vw, 150px);
+  width: clamp(90px, 25vw, 130px);
   height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
+.store-badge:hover {
+  opacity: 0.8;
+}
+
+/* Tablette et tailles intermédiaires */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "logo download"
+      "menu social";
+  }
+
+  .footer-section:nth-child(1) {
+    grid-area: logo;
+  }
+  .footer-section:nth-child(2) {
+    grid-area: menu;
+  }
+  .footer-section:nth-child(3) {
+    grid-area: social;
+  }
+  .footer-section:nth-child(4) {
+    grid-area: download;
+  }
+
+  .footer-section {
+    text-align: left;
+  }
+}
+
+/* Mobile */
 @media (max-width: 480px) {
   .footer {
-    padding: 1rem 0.5rem;
+    padding: 0.75rem 0.5rem;
   }
 
   .footer-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "menu"
+      "social"
+      "download";
     gap: 1rem;
   }
 
   .footer-section {
     text-align: center;
+    padding: 0.25rem;
   }
 
   .app-buttons {

@@ -33,7 +33,7 @@ const Notion = () => {
         <div className="stats-image-wrapper">
           <img src="/assets/coours.jpg" alt="Course" className="img2" />
           <div className="stats-card">
-            <p className="time-distance">5 KM 45m 26s</p>
+            <p className="time-distance">5 KM : 45m 26s</p>
           </div>
         </div>
         <p className="stats-text">

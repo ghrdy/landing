@@ -1,0 +1,95 @@
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app-container {
+  background-color: #f8f9fa; /* Couleur de fond plus claire */
+  min-height: 15vh;
+  max-height: auto;
+  font-family: sans-serif;
+  width: 100%;
+  padding: 0; /* Retirer le padding global */
+}
+
+/* Header */
+.header {
+  min-height: 19vh;
+  background-color: white; /* Couleur de fond blanche pour le header */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet surélevé */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo-container {
+  width: 5rem; /* Ajustez la taille en fonction de votre logo */
+  height: 5rem; /* Taille adaptée */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: transparent; /* Retirer la couleur de fond */
+}
+
+.logo-image {
+  width: 80%;
+  height: 80%;
+}
+
+/* Texte dans le header */
+.header-text {
+  color: #343a40; /* Texte plus foncé */
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* Bouton */
+.header-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 20px; /* Coins arrondis pour un style plus moderne */
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+  background-color: #bd2130; /* Couleur plus foncée au survol */
+}
